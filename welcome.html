@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zam Flora | Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      transition: opacity 1s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.pinimg.com/originals/04/5e/34/045e3432756ff695cf92cade3535dadb.jpg') no-repeat center center/cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(3px);
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #4b2c20;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .container h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #e91e63;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+      animation: fadeInDown 2s ease-in-out;
+    }
+
+    .container p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      color: #5a2a2a;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .enter-btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      color: white;
+      background-color: #e91e63;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .enter-btn:hover {
+      background-color: #c2185b;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+  
+    .petal {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('https://pngimg.com/uploads/rose/rose_PNG66726.png') no-repeat center/contain;
+      opacity: 0.8;
+      animation: float 12s linear infinite;
+    }
+
+    .petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .petal:nth-child(2) { left: 30%; animation-delay: 3s; }
+    .petal:nth-child(3) { left: 50%; animation-delay: 6s; }
+    .petal:nth-child(4) { left: 70%; animation-delay: 9s; }
+    .petal:nth-child(5) { left: 90%; animation-delay: 1s; }
+
+    @keyframes float {
+      0% { top: -10%; transform: rotate(0deg); }
+      100% { top: 110%; transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <!-- Petal Animation -->
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+
+  <div class="container">
+    <h1>Welcome to Zam Flora</h1>
+    <p>Where beauty blossoms into every moment. Discover our floral collection made just for you!</p>
+    <button class="enter-btn" onclick="startTransition()">Enter Shop</button>
+  </div>
+
+  <script>
+    function startTransition() {
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1000); 
+    }
+  </script>
+</body>
+</html>
