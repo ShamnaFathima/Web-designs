@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zam Flora| Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://www.solidbackgrounds.com/images/1920x1200/1920x1200-dark-pink-solid-color-background.jpg') no-repeat center center/cover;
+      color: #4b2c20;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background-color: rgba(255, 240, 245, 0.8);
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #e91e63;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #b30059;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff66a3;
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 2rem auto;
+      width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #d81b60;
+      text-align: center;
+    }
+
+    .flower-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .flower {
+      background-color: #fff0f5;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .flower:hover {
+      transform: scale(1.05);
+    }
+
+    .flower img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .flower h3 {
+      margin: 0.5rem 0;
+      color: #b30059;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #d81b60;
+    }
+
+    .add-cart {
+      background-color: #ff69b4;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-cart:hover {
+      background-color: #c71585;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Zam Flora Collections</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+  <section>
+    <h2>Roses</h2>
+    <div class="flower-grid">
+      <div class="flower">
+        <img src="https://i.pinimg.com/736x/f5/5d/2e/f55d2eaf51659c40bf78d9a66e75cff6.jpg" alt="Red Rose">
+        <h3>Classic Red Rose</h3>
+        <p class="price">₹99</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://i.pinimg.com/736x/f0/1b/f5/f01bf5f421daef3d42552bafcda8603e.jpg" alt="White Rose">
+        <h3>White Rose</h3>
+        <p class="price">₹89</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://www.homefortheharvest.com/wp-content/uploads/2023/04/light-pink-roses.jpg" alt="Pink Rose">
+        <h3>Pink Rose</h3>
+        <p class="price">₹109</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Bouquets</h2>
+    <div class="flower-grid">
+      <div class="flower">
+        <img src="https://i.pinimg.com/originals/e5/54/4f/e554
+4f91557e1ec8d95978c2a1b3ba04.jpg"" alt="Pastel Bouquet">
+        <h3>Pastel Mix</h3>
+        <p class="price">₹349</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bfd17c63e2d090b269114b9/1647439641772-J4QFWIMWEG7DX1JBHY58/Sunshine+Smile.jpeg" alt="Elegant">
+        <h3>Elegant Whites</h3>
+        <p class="price">₹389</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://s-media-cache-ak0.pinimg.com/736x/4d/d8/38/4dd8386e2409385e612a89170472222d.jpg" alt="Love">
+        <h3>Blush Romance</h3>
+        <p class="price">₹399</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Seasonal Flowers</h2>
+    <div class="flower-grid">
+      <div class="flower">
+        <img src="https://i.pinimg.com/736x/7d/25/d6/7d25d6fc369b19111a6b56434636d20f--sunflower-floral-arrangements-vase-arrangements.jpg" alt="Sunflower">
+        <h3>Sunflower</h3>
+        <p class="price">₹129</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://images.squarespace-cdn.com/content/v1/5eb02fa4ee4acc4933cbdb5e/1614180450715-HWLW40EFPZUKXZKC2JYD/image.jpg" alt="Tulip">
+        <h3>Yellow Tulip</h3>
+        <p class="price">₹149</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://images.pexels.com/photos/1196445/pexels-photo-1196445.jpeg?cs=srgb&dl=selective-focus-of-white-daisy-flower-1196445.jpg&fm=jpg" alt="Daisy">
+        <h3>White Daisy</h3>
+        <p class="price">₹99</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Luxury Collection</h2>
+    <div class="flower-grid">
+      <div class="flower">
+        <img src="https://www.planetnatural.com/wp-content/uploads/2023/12/Orchid-1.jpg" alt="Orchid">
+        <h3>Royal Orchids</h3>
+        <p class="price">₹799</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://www.kbfwholesale.com/wp-content/uploads/2020/06/w181.jpg" alt="Lily">
+        <h3>White Lily</h3>
+        <p class="price">₹699</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="flower">
+        <img src="https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1546492898/vendor/5424/catalog/product/2/0/20181215090823_file_5c156d47b6cb2.jpeg" alt="Exotic">
+        <h3>Exotic Mix</h3>
+        <p class="price">₹899</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - FLOWERS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffe0ec, #f8bbd0, #f48fb1);
+      color: #4a0033;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #fff0f5;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d81b60;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #880e4f;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #ad1457;
+    }
+
+    .contact-section {
+      flex: 1;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .contact-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #c2185b;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      font-size: 1.2rem;
+      color: #6a1b9a;
+      margin-bottom: 40px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fffafc;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #f8bbd0;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: #f06292;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #ec407a;
+    }
+
+    footer {
+      background: #fce4ec;
+      text-align: center;
+      padding: 20px;
+      color: #6a1b9a;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1> ZAMFLORA</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>Get in Touch with FLOWERS</h2>
+    <p>Have a blooming idea or question? Drop us a message and we'll be with you in a petal's whisper!</p>
+    <form onsubmit="goToThankYou(); return false;">
+  <input type="text" name="name" placeholder="Your Name">
+  <input type="email" name="email" placeholder="Your Email">
+  <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<script>
+  function goToThankYou() {
+    window.location.href = "thankyou.html";
+  }
+</script>
+
+
+  </section>
+  <footer>
+    &copy; 2025 ZAM FLORA. Designed with fragrance and flair.
+  </footer>
+</body>
+
+</html>

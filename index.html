@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FLOWERS | Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Outfit', sans-serif;
+      overflow: hidden;
+      transition: background-image 2s ease-in-out;
+    }
+
+    body {
+      background-size: cover;
+      background-position: center;
+      animation: fadeInBody 2s ease;
+    }
+
+    @keyframes fadeInBody {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .hero {
+      height: 100vh;
+      backdrop-filter: brightness(0.85);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      animation: pageEnter 2s ease;
+    }
+
+    .hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 10px #ec407a;
+      animation: fadeInDown 2s ease;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 3s ease;
+    }
+
+    .button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      background-color: #ffffff;
+      color: #ec407a;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeInUp 2.5s ease;
+    }
+
+    .button:hover {
+      background-color: #ffe3ed;
+      color: #d81b60;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pageEnter {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url('https://pngimg.com/uploads/rose/rose_PNG66726.png') no-repeat center/contain;
+      opacity: 0.6;
+      animation: float 15s linear infinite;
+    }
+
+    .flower:nth-child(1) { left: 5%; animation-delay: 0s; }
+    .flower:nth-child(2) { left: 25%; animation-delay: 3s; }
+    .flower:nth-child(3) { left: 50%; animation-delay: 6s; }
+    .flower:nth-child(4) { left: 75%; animation-delay: 9s; }
+    .flower:nth-child(5) { left: 90%; animation-delay: 12s; }
+
+    @keyframes float {
+      0% { top: -10%; transform: rotate(0deg); }
+      100% { top: 110%; transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .hero p { font-size: 1rem; }
+    }
+
+    .fade-out {
+      animation: fadeOut 1.2s forwards;
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+
+  <section class="hero" id="welcome">
+    <h1>FLOWERS</h1>
+    <p>Unwrap joy with every petal – your journey to floral beauty begins here.</p>
+    <button class="button" onclick="goToShop()">Explore Now</button>
+  </section>
+
+  <script>
+    function goToShop() {
+      const hero = document.getElementById('welcome');
+      hero.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = 'shop.html';
+      }, 1200);
+    }
+
+    const backgrounds = [
+      'https://i.pinimg.com/originals/f9/02/f2/f902f2c8635fef44a6004ae5602d91c9.jpg',
+      'https://wallpaperaccess.com/full/8640791.jpg',
+      'https://i.pinimg.com/736x/d7/21/68/d721680265e7661fbc985073cf25c322.jpg'
+    ];
+
+    let index = 0;
+    setInterval(() => {
+  document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+  index = (index + 1) % backgrounds.length;
+}, 2500); 
+
+  </script>
+
+</body>
+</html>
